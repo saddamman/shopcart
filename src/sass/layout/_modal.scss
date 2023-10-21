@@ -1,0 +1,13 @@
+.modal-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-black);
+  z-index: 9999;
+  opacity: 0.5;
+}
+.customModal {
+  z-index: 10000;
+}

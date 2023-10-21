@@ -1,0 +1,40 @@
+.navigation {
+  .navbar-brand {
+    color: var(--color-white);
+    img {
+      max-height: 50px;
+    }
+  }
+  .navbar-nav {
+    .nav-item {
+      position: relative;
+      margin: 0 10px;
+    }
+    .nav-link {
+      color: var(--color-dark);
+      &.active {
+        &:after {
+          content: "";
+          display: inline-block;
+          width: 100%;
+          position: absolute;
+          left: 0;
+          height: 2px;
+          bottom: 0;
+          background-color: var(--color-danger);
+        }
+      }
+    }
+  }
+  &__right {
+    &__cart {
+      .badge {
+        width: 22px;
+        top: 5px !important;
+        height: 22px;
+        padding: 2px;
+        line-height: 17px;
+      }
+    }
+  }
+}

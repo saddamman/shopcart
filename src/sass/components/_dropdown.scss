@@ -1,0 +1,11 @@
+.custom-dropdown {
+  &__button {
+    // background-color: $btn-hover-color;
+    &:hover {
+      background-color: inherit;
+    }
+    &:first-child:active {
+      border: 0;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.banner {
+  background-color: #ffffff;
+  background-image: linear-gradient(160deg, #ffffff 0%, #b8e2dd 18%, #ffffff 100%);
+  &__left {
+    @include flexbox($align: center);
+    &__box {
+      &__title {
+        font-size: 50px;
+        color: var(--color-dark);
+      }
+      display: inline;
+      &__btn {
+        color: #fff;
+        padding: 10px 20px;
+        background-color: $btn-hover-color;
+        &:hover,
+        &:active {
+          background-color: $btn-hover-color !important;
+          color: var(--color-white) !important;
+          border-color: $btn-hover-color !important;
+        }
+      }
+    }
+    .hand-icon {
+      width: 50px;
+    }
+  }
+}
