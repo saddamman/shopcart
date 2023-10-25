@@ -1,0 +1,8 @@
+.offer {
+  margin-top: 70px;
+  background-color: #ffffff;
+  background-image: linear-gradient(160deg, #ffffff 0%, #b8e2dd 18%, #ffffff 100%);
+  &__left {
+    @include flexbox($align: center);
+  }
+}

@@ -1,0 +1,32 @@
+.footer {
+  &__menu {
+    margin: 10px 0;
+    &__link {
+      color: var(--color-dark);
+      padding: 5px;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+  }
+  &__social {
+    &__link {
+      color: var(--color-dark);
+      margin: 0 10px;
+      font-size: 24px;
+      width: 40px;
+      height: 40px;
+      background-color: #ffffff;
+      background-image: linear-gradient(160deg, #ffffff 0%, #b8e2dd 18%, #ffffff 100%);
+      @include flexbox($justify: center, $display: inline-flex, $align: center);
+      border-radius: 5px;
+      svg {
+        @include hover-transition(all, 0.3s, ease-in-out);
+      }
+      &:hover {
+        svg {
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
+}

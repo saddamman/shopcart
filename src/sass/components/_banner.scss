@@ -9,17 +9,6 @@
         color: var(--color-dark);
       }
       display: inline;
-      &__btn {
-        color: #fff;
-        padding: 10px 20px;
-        background-color: $btn-hover-color;
-        &:hover,
-        &:active {
-          background-color: $btn-hover-color !important;
-          color: var(--color-white) !important;
-          border-color: $btn-hover-color !important;
-        }
-      }
     }
     .hand-icon {
       width: 50px;

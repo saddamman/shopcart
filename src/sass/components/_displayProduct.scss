@@ -1,0 +1,9 @@
+.displayProduct {
+  &__left {
+    &__navSlider {
+      .slick-arrow {
+        color: var(--color-black);
+      }
+    }
+  }
+}

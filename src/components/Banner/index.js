@@ -1,10 +1,10 @@
 import React from "react";
-import Button from "../UI/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import Container from "../Container";
 import BannerImg from "../../assets/hero_image.png";
 import handIcon from "../../assets/hand_icon.png";
+import ThemeButton from "../UI/ThemeButton";
 
 const Banner = () => {
   return (
@@ -21,9 +21,9 @@ const Banner = () => {
                 <span className=" d-md-block">Collections For Everyone</span>
                 {/* <span className=" d-md-block">For Everyone</span> */}
               </h1>
-              <Button className="banner__left__box__btn">
+              <ThemeButton className="banner__left__box__btn">
                 Latest collections <FontAwesomeIcon icon={faArrowRightLong} />
-              </Button>
+              </ThemeButton>
             </div>
           </div>
           <div className="col-md-4 banner__right">

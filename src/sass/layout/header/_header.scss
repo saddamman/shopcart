@@ -1,0 +1,18 @@
+.FixedHeader {
+  @include hover-transition("all");
+  position: fixed;
+  z-index: 999;
+  background-color: var(--color-white);
+  top: 0;
+  width: 100%;
+  animation: slideDown 0.35s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

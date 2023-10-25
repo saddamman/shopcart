@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingBag, faUserAlt } from "@fortawesome/free-solid-svg-icons";
 import { ModalContext } from "../../../context/ModalContext";
 
-import cartIcon from "../../../assets/logo.png";
+import logo from "../../../assets/logo.png";
 
 const Navigation = () => {
   const { openModal } = useContext(ModalContext);
@@ -14,8 +14,9 @@ const Navigation = () => {
   return (
     <nav className="navbar navbar-expand-lg navigation ">
       <div className="container">
-        <Link className="navbar-brand" href="/">
-          <img src={cartIcon} alt="shoping" /> <small>ShopBazar</small>
+        <Link className="navbar-brand d-flex align-items-center gap-2" href="/">
+          <img src={logo} alt="shoping" />
+          <small className="text-danger-emphasis fs-6 fw-bolder">ShopBazar</small>
         </Link>
         <button
           className="navbar-toggler"
@@ -45,7 +46,7 @@ const Navigation = () => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/kids">
+              <NavLink className="nav-link" to="/kid">
                 Kids
               </NavLink>
             </li>
