@@ -2,12 +2,14 @@ import "./App.css";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./routers/Approuter";
 import ModalContextProvider from "./providers/ModalContextProvider";
+import ShpoContextProvider from "./providers/ShopContextProvider";
 
 function App() {
-  console.log("app is logged !");
   return (
     <ModalContextProvider>
-      <RouterProvider router={router}></RouterProvider>
+      <ShpoContextProvider>
+        <RouterProvider router={router}></RouterProvider>
+      </ShpoContextProvider>
     </ModalContextProvider>
   );
 }

@@ -4,13 +4,14 @@ import RootLayout from "../layout/root/RootLayout";
 import ErrorLayout from "../layout/errorLayout";
 import Home from "../pages/Home";
 import About from "../pages/About/Index";
-import Men from "../pages/Men";
-import Login from "../components/Auth/Login";
-import Register from "../components/Auth/Register";
-import Kids from "../pages/Kids";
-import Shopcategory from "../pages/Shopcategory";
+import Shopcategory from "../layout/Shopcategory";
 import Products from "../pages/Products";
 import Cart from "../components/Cart";
+
+// Category Inner Pages Banner
+import banner_women from "../assets/banner_women.png";
+import banner_mens from "../assets/banner_mens.png";
+import banner_kids from "../assets/banner_kids.png";
 
 export const router = createBrowserRouter([
   {
@@ -20,11 +21,11 @@ export const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: "/about", element: <About /> },
-      { path: "/men", element: <Shopcategory catefory="men" /> },
-      { path: "/kids", element: <Shopcategory catefory="kids" /> },
-      { path: "/women", element: <Shopcategory catefory="women" /> },
-      { path: "/prodcuts/:productId", element: <Products catefory="products" /> },
-      { path: "/cart", element: <Cart catefory="Cart" /> },
+      { path: "/men", element: <Shopcategory bannerImg={banner_mens} category="men" /> },
+      { path: "/kid", element: <Shopcategory bannerImg={banner_kids} category="kid" /> },
+      { path: "/women", element: <Shopcategory bannerImg={banner_women} category="women" /> },
+      { path: "/prodcuts/:productId", element: <Products category="products" /> },
+      { path: "/cart", element: <Cart category="Cart" /> },
       // { path: "/login", element: <Login /> },
       // { path: "/signup", element: <Register /> },
     ],

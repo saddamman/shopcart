@@ -1,7 +1,38 @@
+// flexMixin
 @mixin flexbox($display: flex, $direction: row, $justify: flex-start, $align: stretch, $flex: 1) {
   display: $display;
   flex-direction: $direction;
   justify-content: $justify;
   align-items: $align;
   flex: $flex;
+}
+
+// Hover hover-transition mixin
+@mixin hover-transition($properties, $duration: 0.3s, $timing-function: ease, $delay: 0s) {
+  transition: $properties $duration $timing-function $delay;
+
+  &:hover {
+    transition: $properties $duration $timing-function $delay;
+  }
+}
+
+// Media Query Mixin
+
+$media: (
+  sm: 575.98px,
+  md: 767.98px,
+  lg: 991.98px,
+  xl: 1199.98px,
+  xxl: 1399.98px,
+);
+
+@mixin media($breakpoint) {
+  @each $breakpoints, $size in $media {
+    @debug $breakpoints;
+    @if $breakpoint==$breakpoints {
+      @media screen and (max-width: $size) {
+        @content;
+      }
+    }
+  }
 }

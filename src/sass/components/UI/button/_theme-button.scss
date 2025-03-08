@@ -1,0 +1,12 @@
+.theme-button {
+  color: #fff;
+  padding: 10px 20px;
+  background-color: $btn-hover-color;
+  border-radius: 50rem;
+  &:hover,
+  &:active {
+    background-color: $btn-hover-color !important;
+    color: var(--color-white) !important;
+    border-color: $btn-hover-color !important;
+  }
+}
