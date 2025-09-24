@@ -1,9 +1,12 @@
-import React from "react";
+import { cn } from "../../utils/cn";
 
 const Button = ({ children, className, type, onClick }) => {
-  const classes = `btn rounded-pill ${className}`;
   return (
-    <button className={classes} type={type ? type : ""} onClick={onClick}>
+    <button
+      className={cn("btn rounded-pill", className)}
+      type={type ? type : ""}
+      onClick={onClick}
+    >
       {children}
     </button>
   );
